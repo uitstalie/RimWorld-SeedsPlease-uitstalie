@@ -252,3 +252,6 @@ paket-files/
 *.sln.iml
 
 About/PublishedFileId.txt
+
+# Claude Code
+.claude/
