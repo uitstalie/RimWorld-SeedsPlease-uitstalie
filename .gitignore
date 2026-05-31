@@ -255,3 +255,10 @@ About/PublishedFileId.txt
 
 # Claude Code
 .claude/
+
+# Build output and workshop references
+output/
+workshop-read-ref/
+
+# OpenCode runtime
+.opencode/

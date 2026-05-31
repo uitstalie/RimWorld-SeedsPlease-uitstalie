@@ -1,10 +1,10 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding agents when working with code in this repository.
 
 ## Project Overview
 
-This is **SeedsPlease: Lite Redux**, a RimWorld mod (package ID `Evyatar108.SeedsPleaseLiteRedux`) that adds a seed system to farming. It is a C# Harmony mod targeting RimWorld 1.4 and 1.5. The core design is **runtime seed generation**: rather than defining every seed statically in XML, the mod inspects all sowable plants at startup and auto-generates `ThingDef` seeds for any plant that lacks a pre-defined one.
+This is **SeedsPlease: Lite Redux**, a RimWorld mod (package ID `Evyatar108.SeedsPleaseLiteRedux`) that adds a seed system to farming. It is a C# Harmony mod targeting RimWorld 1.5 and 1.6. The core design is **runtime seed generation**: rather than defining every seed statically in XML, the mod inspects all sowable plants at startup and auto-generates `ThingDef` seeds for any plant that lacks a pre-defined one.
 
 ## Build Commands
 
@@ -21,11 +21,11 @@ dotnet build -c Release Source/SeedsPleaseLiteRedux.csproj
 dotnet build Source/SeedsPleaseLiteRedux.sln
 ```
 
-Both Debug and Release configurations output the assembly to `1.5/Assemblies/SeedsPleaseLiteRedux.dll`. For RimWorld 1.4 support, the same assembly is also present at `1.4/Assemblies/SeedsPleaseLiteRedux.dll`.
+Both Debug and Release configurations output the assembly to `1.6/Assemblies/SeedsPleaseLiteRedux.dll`.
 
 ### Build Dependencies
 
-- `Krafs.Rimworld.Ref` (1.5.4063) — RimWorld assembly references
+- `Krafs.Rimworld.Ref` (1.5.4063) — RimWorld assembly references (will need update for 1.6)
 - `Lib.Harmony` (2.2.2) — runtime patching
 - `Krafs.Publicizer` — publicizes `Assembly-CSharp` to access `internal` members
 - `Microsoft.NETFramework.ReferenceAssemblies.net48`
@@ -81,7 +81,7 @@ When the user toggles a plant's seedless status, `ProcessInversions()` reconcile
 ## File Organization
 
 - **`Source/`** — All C# source.
-- **`1.4/` / `1.5/`** — Version-specific XML `Defs` and compiled assembly. The two versions share identical def structures; only the assembly differs (though in practice the same DLL is often copied to both).
+- **`1.5/` / `1.6/`** — Version-specific XML `Defs` and compiled assembly.
 - **`Common/`** — Shared across versions: textures, language translations, and the Harmony patch file for the original `SeedsPleaseLite` (`patch.owlchemist.seedspleaselite.xml`).
 - **`Mods/`** — Compatibility patches for ~100 third-party mods. Each subdirectory is named by the target mod's package ID and typically contains `Defs/` (seed definitions) and/or `Patches/` (XML patches). `LoadFolders.xml` conditionally loads these folders via `IfModActive`.
 - **`SowGrass/`** — A conditional patch for `Vanilla Factions Expanded - Core` that enables sowing grass when that mod is active.
@@ -98,5 +98,5 @@ When the user toggles a plant's seedless status, `ProcessInversions()` reconcile
 
 1. Create a folder under `Mods/` named after the new mod's package ID.
 2. Add seed `Defs` in `Mods/<packageId>/Defs/` and/or XML patches in `Mods/<packageId>/Patches/`.
-3. Register the folder in both `<v1.4>` and `<v1.5>` sections of `LoadFolders.xml` with `IfModActive="<packageId>"`.
+3. Register the folder in both `<v1.5>` and `<v1.6>` sections of `LoadFolders.xml` with `IfModActive="<packageId>"`.
 4. A template exists at `Mods/__TEMPLATE/`.
