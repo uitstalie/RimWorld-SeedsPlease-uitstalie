@@ -56,6 +56,7 @@ public class Patch_PlantCollected
 
 //This is responsible for determining which crops show up on the list when you configue a grow zone
 [HarmonyPatch(typeof(Command_SetPlantToGrow), nameof(Command_SetPlantToGrow.IsPlantAvailable))]
+[HarmonyPriority(Priority.Low)]
 static class Patch_IsPlantAvailable
 {
     public static bool Postfix(bool __result, ThingDef plantDef, Map map)

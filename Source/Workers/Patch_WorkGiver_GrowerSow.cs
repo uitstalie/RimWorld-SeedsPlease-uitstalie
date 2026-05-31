@@ -10,6 +10,7 @@ using System.Reflection;
 
 //This patch controls the dropping of seeds upon harvest
 [HarmonyPatch]
+[HarmonyPriority(Priority.Low)]
 public class Patch_WorkGiver_GrowerSow_JobOnCell
 {
     const int SeedsToCarry = 25;
