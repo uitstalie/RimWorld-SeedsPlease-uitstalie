@@ -220,7 +220,7 @@ public static class SeedsPleaseUtility
             seed = new ThingDef()
             {
                 defName = defName,
-                label = label.ToLower() + " seeds",
+                label = "SPL.AutoSeedLabel".Translate(label),
                 stackLimit = template.stackLimit,
                 tradeTags = template.tradeTags,
                 thingCategories = template.thingCategories,

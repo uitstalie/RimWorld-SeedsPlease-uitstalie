@@ -33,4 +33,6 @@
 
 	<SPL.Settings.SeedlessDesc>Define which plants do not need seeds (unharvestable plants cannot be changed).</SPL.Settings.SeedlessDesc>
 	<SPL.Settings.LabelsDesc>Rename the labels for seeds with your own (feature currently disabled).</SPL.Settings.LabelsDesc>
+
+	<SPL.AutoSeedLabel>{0} seeds</SPL.AutoSeedLabel>
 </LanguageData>

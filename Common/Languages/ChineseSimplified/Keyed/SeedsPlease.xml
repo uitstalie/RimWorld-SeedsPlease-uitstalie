@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<HarvestMultiplier>收获倍率</HarvestMultiplier>
+	<SeedMultiplier>种子倍率</SeedMultiplier>
+	<SeedBaseChance>种子基础几率</SeedBaseChance>
+	<SeedExtraChance>额外种子几率</SeedExtraChance>
+	<GrowDays>生长周期</GrowDays>
+	<SPL.BillHelp>（选择此工作类型前，请先清除过滤器并选择种子。）</SPL.BillHelp>
+	<SPL.SeedSpotError>必须放置在炉灶台面上。</SPL.SeedSpotError>
+	<SPL.Invalid>无效</SPL.Invalid>
+
+	<SPL.RequiresRestart>以下设置需要重启游戏：</SPL.RequiresRestart>
+	<SPL.Settings.MarketValueModifier>市场价值倍率（默认: {0}, 最小: {1}, 最大: {2}）: </SPL.Settings.MarketValueModifier>
+	<SPL.Settings.MarketValueModifier.Desc>种子的市场价值乘以此值。降低此值以获得更便宜的种子购买价格。</SPL.Settings.MarketValueModifier.Desc>
+
+	<SPL.Settings.SeedExtractionModifier>种子提取倍率（默认: {0}, 最小: {1}, 最大: {2}）: </SPL.Settings.SeedExtractionModifier>
+	<SPL.Settings.SeedExtractionModifier.Desc>从产物中提取的种子数量乘以此值。默认大多数提取为 {0} 个。</SPL.Settings.SeedExtractionModifier.Desc>
+
+	<SPL.Settings.SeedFactorModifier>种子产出倍率（默认: {0}, 最小: {1}, 最大: {2}）: </SPL.Settings.SeedFactorModifier>
+	<SPL.Settings.SeedFactorModifier.Desc>植物正常产出的种子数量乘以此值。大多数植物默认掉落 {0} 个种子，另有额外掉落几率。</SPL.Settings.SeedFactorModifier.Desc>
+
+	<SPL.Settings.NoUselessSeeds>不售卖无用种子</SPL.Settings.NoUselessSeeds>
+	<SPL.Settings.NoUselessSeeds.Desc>启用后，商人不会出售无法在你拥有的任何地图中生长的种子。</SPL.Settings.NoUselessSeeds.Desc>
+
+	<SPL.Settings.ClearSnow>播种前清除积雪</SPL.Settings.ClearSnow>
+	<SPL.Settings.ClearSnow.Desc>启用后，殖民者会在播种前清除深度超过20%的积雪。此功能为可选，更多是为了美观和真实性。</SPL.Settings.ClearSnow.Desc>
+
+	<SPL.Settings.EdibleSeeds>可食用种子</SPL.Settings.EdibleSeeds>
+	<SPL.Settings.EdibleSeeds.Desc>启用后，种子可被食用干草的动物吃掉。\n\n更改此设置需要重启游戏以重建种子数据库。</SPL.Settings.EdibleSeeds.Desc>
+
+	<SPL.Settings.ReloadNeeded>需要重新加载游戏以重新处理种子数据库中的添加/移除操作。</SPL.Settings.ReloadNeeded>
+	<SPL.Settings.ReloadNeededHeader>需要重新加载</SPL.Settings.ReloadNeededHeader>
+
+	<SPL.Settings.SeedlessDesc>定义哪些植物不需要种子（不可收获的植物无法更改）。</SPL.Settings.SeedlessDesc>
+	<SPL.Settings.LabelsDesc>自定义种子标签（此功能暂未启用）。</SPL.Settings.LabelsDesc>
+
+	<SPL.AutoSeedLabel>{0}种子</SPL.AutoSeedLabel>
+</LanguageData>
