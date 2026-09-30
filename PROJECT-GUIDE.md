@@ -1,4 +1,7 @@
-# AGENTS.md
+# SeedsPlease: Lite Redux - 项目指南
+
+> 本文原名 `AGENTS.md`，2026-09-30 改名：全工作区只保留工作区根目录一份 `AGENTS.md`
+> （统一入口，含本项目要点与跨项目铁律）。本文件保留本仓库的深度细节。
 
 This file provides guidance to AI coding agents when working with code in this repository.
 
