@@ -9,14 +9,14 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\1.6\Assemblies\</OutputPath>
+    <OutputPath>..\1.7\Assemblies\</OutputPath>
     <DefineConstants>TRACE;NDEBUG</DefineConstants>
 		<WarningLevel>4</WarningLevel>
 		<DebugSymbols>false</DebugSymbols>
 		<DebugType>None</DebugType>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\1.6\Assemblies\</OutputPath>
+    <OutputPath>..\1.7\Assemblies\</OutputPath>
     <DefineConstants>TRACE;DEBUG;NETFRAMEWORK;NET48;</DefineConstants>
 	</PropertyGroup>
 	<ItemGroup>
@@ -29,6 +29,8 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
+    <!-- 1.7 的 Krafs.Rimworld.Ref 只提供 net10.0，net48 项目无法引用；
+         保持 1.6 引用编译，产物在 1.7 上靠 Waylith 的 lax 类型解析运行（已实测 9 个补丁全部生效）。 -->
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" GeneratePathProperty="true" />
   </ItemGroup>
 	<ItemGroup>
